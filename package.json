@@ -4,7 +4,7 @@
   "description": "Docker monitor helping to maintain list of running containers",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./lib/test.js"
   },
   "repository": {
     "type": "git",
