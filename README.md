@@ -5,7 +5,7 @@ This library is developed to perform one simple function: help to maintain list 
 ## Install
 Install locally
 ```
-npm install node-grok
+npm install node-docker-monitor
 ```
 
 ## Quick start
