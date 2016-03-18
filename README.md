@@ -2,6 +2,8 @@
 
 This library is developed to perform one simple function: help to maintain list of running Docker containers on a single host.
 
+More details about usage and implementation here https://memz.co/monitoring-docker-containers-node-js/
+
 ## Install
 Install locally
 ```
@@ -44,10 +46,13 @@ Container object has following structure
    "Name": "m4all-next"
  }
 ```
-When monitor starts, it calls `onContainerUp` callback for all currently running containers and then starts listening to Docker events, calling `onContainerUp` and `onContainerDown` when appropriate.
+
+When monitor starts, it calls `onContainerUp()` callback for all currently running containers and then starts listening to Docker events, calling `onContainerUp()` and `onContainerDown()` when appropriate.
 
 ## API
-* **function(handler, [docker])** - starts monitor with event *handler* that will receive events. Even handler must have `onContainerUp` and `onContainerDown` functions receiving parameters *info* - container info and *docker* - dockerode `Docker()` [object](https://github.com/apocas/dockerode). By default, it communicates to local Docker instance via `/var/run/docker.sock` Unix socket. If you want to change this behaviour, you can construct your own `Docker` object using [dockerode](https://github.com/apocas/dockerode) library and pass it as a second (optional) parameter.
+* **function(handler, [options])** - starts monitor with event *handler* that will receive events. Even handler must have `onContainerUp(containerInfo, docker)` and `onContainerDown(containerInfo, docker)` functions receiving parameters *containerInfo* - container info and *docker* - dockerode `Docker()` [object](https://github.com/apocas/dockerode). By default, it communicates to local Docker instance via `/var/run/docker.sock` Unix socket. You can change default Docker configuration by providing either configuration object or pre-constructed `Docker` (for more details [see](https://github.com/apocas/dockerode)).
+
+Find out more about node-docker-monitor https://memz.co/monitoring-docker-containers-node-js/
 
 ## License 
 **ISC License (ISC)**
