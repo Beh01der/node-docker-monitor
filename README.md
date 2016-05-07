@@ -50,7 +50,7 @@ Container object has following structure
 When monitor starts, it calls `onContainerUp()` callback for all currently running containers and then starts listening to Docker events, calling `onContainerUp()` and `onContainerDown()` when appropriate.
 
 ## API
-* **function(handler, [options])** - starts monitor with event *handler* that will receive events. Even handler must have `onContainerUp(containerInfo, docker)` and `onContainerDown(containerInfo, docker)` functions receiving parameters *containerInfo* - container info and *docker* - dockerode `Docker()` [object](https://github.com/apocas/dockerode). By default, it communicates to local Docker instance via `/var/run/docker.sock` Unix socket. You can change default Docker configuration by providing either configuration object or pre-constructed `Docker` (for more details [see](https://github.com/apocas/dockerode)).
+* **function(handler, [dockerOptions], [options])** - starts monitor with event *handler* that will receive events. Even handler must have `onContainerUp(containerInfo, docker)` and `onContainerDown(containerInfo, docker)` functions receiving parameters *containerInfo* - container info and *docker* - dockerode `Docker()` [object](https://github.com/apocas/dockerode). By default, it communicates to local Docker instance via `/var/run/docker.sock` Unix socket. You can change default Docker configuration by providing either configuration object or pre-constructed `Docker` (for more details [see](https://github.com/apocas/dockerode)).
 
 Usage example of **node-docker-monitor** with fully functional API Gateway for microservices [here](https://memz.co/api-gateway-microservices-docker-node-js/)
 
