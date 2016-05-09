@@ -69,7 +69,7 @@ interface EventHandler {
 }
 
 interface MonitorFunction {
-    (handler: EventHandler, dockerOpts?: DockerodeOptions | Dockerode, opts: Options = { strategy: 'monitorAll', selectorLabel: 'node-docker-monitor' })
+    (handler: EventHandler, dockerOpts?: DockerodeOptions | Dockerode, opts?: Options /* { strategy: 'monitorAll', selectorLabel: 'node-docker-monitor' } */)
 }
 
 declare let monitorFunction: MonitorFunction;
