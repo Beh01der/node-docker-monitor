@@ -1,6 +1,6 @@
 {
   "name": "node-docker-monitor",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Docker monitor helping to maintain list of running containers",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
