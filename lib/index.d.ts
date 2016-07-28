@@ -63,13 +63,19 @@ interface Options {
     selectorLabel?: string;
 }
 
+interface Monitor {
+    stop();
+}
+
 interface EventHandler {
     onContainerUp(info: ContainerInfo, docker?: Dockerode);
     onContainerDown(info: ContainerInfo, docker?: Dockerode);
+    onMonitorStarted(monitor?: Monitor, docker?: Dockerode);
+    onMonitorStopped(monitor?: Monitor, docker?: Dockerode);
 }
 
 interface MonitorFunction {
-    (handler: EventHandler, dockerOpts?: DockerodeOptions | Dockerode, opts?: Options /* { strategy: 'monitorAll', selectorLabel: 'node-docker-monitor' } */)
+    (handler: EventHandler, dockerOpts?: DockerodeOptions | Dockerode, opts?: Options /* { strategy: 'monitorAll', selectorLabel: 'node-docker-monitor' } */): Monitor
 }
 
 declare let monitorFunction: MonitorFunction;
