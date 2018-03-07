@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Beh01der/node-docker-monitor.git"
+    "url": "https://github.com/PowerMogli/node-docker-monitor.git"
   },
   "keywords": ["docker", "monitor", "container", "event"],
   "author": "Andrey Chausenko <andrey.chausenko@gmail.com> (https://memz.co)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Beh01der/node-docker-monitor/issues"
+    "url": "https://github.com/PowerMogli/node-docker-monitor/issues"
   },
-  "homepage": "https://github.com/Beh01der/node-docker-monitor",
+  "homepage": "https://github.com/PowerMogli/node-docker-monitor",
   "dependencies": {
     "dockerode": "^2.5.4",
     "lodash.clonedeep": "^4.5.0"
