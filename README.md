@@ -2,8 +2,6 @@
 
 This library is developed to perform one simple function: help to maintain list of running Docker containers on a single host.
 
-More details about usage of **node-docker-monitor** with fully functional example https://memz.co/api-gateway-microservices-docker-node-js/
-
 ## Install
 Install locally
 ```
@@ -58,9 +56,6 @@ When monitor starts, it calls `onContainerUp()` callback for all currently runni
 * `{}` or `{strategy: 'monitorAll'}` - monitor all containers except those that have label `node-docker-monitor` with *negative value* - `'0' | 'null' | 'false' | 'disable' | 'disabled' | ''`
 * `{strategy: 'monitorSelected'}` - monitor only containers that have label `node-docker-monitor` with *positive value* - any string except `'0' | 'null' | 'false' | 'disable' | 'disabled' | ''`
 * `{strategy: 'monitorSelected', selectorLabel: 'monitor-me'}` - monitor only containers that have label `monitor-me` with *positive value* - any string except `'0' | 'null' | 'false' | 'disable' | 'disabled' | ''`
-
-
-Usage example of **node-docker-monitor** with fully functional API Gateway for microservices [here](https://memz.co/api-gateway-microservices-docker-node-js/)
 
 ## License 
 **ISC License (ISC)**
